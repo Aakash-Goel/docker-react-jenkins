@@ -1,11 +1,12 @@
-node('docker') {
+node {
+  def app
 
-  stage 'Checkout'
+  stage('Clone repository')
     checkout scm
 
-  stage 'Build & UnitTest'
+  stage('Build Image')
     sh "docker build -t aakashgoel/docker-react-jenkins -f Dockerfile.dev ."
 
-  stage 'Integration Test'
+  stage('Test Image')
     sh "docker run aakashgoel/docker-react-jenkins npm run test:coverage"
 }
