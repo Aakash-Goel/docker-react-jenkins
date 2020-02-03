@@ -1,0 +1,25 @@
+# ignore .git and .cache folders
+.git
+.cache
+
+# ignore dependencies
+/npm_modules
+
+# ignore testing
+/coverage
+
+# ignore production
+/build
+
+# ignore misc
+.DS_Store
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+.vscode
