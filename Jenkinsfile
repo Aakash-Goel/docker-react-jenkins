@@ -14,6 +14,6 @@ node {
   }
 
   stage('Slack Notification') {
-    slackSend(channel: "#jenkins-pipeline" color: "good", message: "SUCCESS: Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]' (${env.BUILD_URL})")
+    slackSend(channel: "#jenkins-pipeline", color: "good", message: "SUCCESS: Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]' (${env.BUILD_URL})")
   }
 }
